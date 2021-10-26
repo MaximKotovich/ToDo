@@ -1,0 +1,57 @@
+*{
+    bottom: 0;
+    top: 0;
+}
+.autorizPage{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.20);
+    .autorizeBody{
+        display: flex;
+        padding: 3%;
+        min-width: 400px;
+        background-color: rgba(103, 182, 123, 0.623);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .divForLoginInp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            p{
+                width: 30%;
+            }
+            .loginInp,.passInp{
+                height: 25px;
+                font-size: 18px;
+            } 
+        }
+        .buttonGroup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            .registration,.enter{
+                cursor: pointer;
+                margin: 3%;
+                padding: 7%;
+                color: white;
+                background-color: rgba(103, 124, 182, 0.945);
+                border: none;
+                font-weight: 600;
+                letter-spacing: 1px;
+                &:hover{
+                    background-color: rgba(75, 102, 179, 0.945);
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }  
+        }
+    }
+}
