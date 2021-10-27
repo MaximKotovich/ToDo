@@ -1,0 +1,59 @@
+.todoPage{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .todoBody{
+        min-width: 350px;
+        padding: 1%;
+        background-color: rgba(118, 130, 240, 0.438);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .todoList{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+            
+            &:hover{
+                background-color: rgba(116, 123, 201, 0.438); 
+            }
+            .todoTitle{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            .checkboxTodoList{
+                zoom: 1.5;
+                cursor: pointer;
+            }
+            .CloseIcon, .EditIcon{
+                cursor: pointer;                
+            }
+            .CloseIcon{
+                margin-left: 5%;
+                :hover{
+                    color: red;
+                    transition: 0.2s;
+                }
+            }
+            .EditIcon{
+                :hover{
+                    color: rgba(33, 41, 136, 0.774);
+                    transition: 0.2s;
+                }
+            }
+        }
+        .addTodoButton{
+            background-color: rgba(116, 123, 201, 0.911);
+            margin-top: 2%;
+        }
+    }
+}
