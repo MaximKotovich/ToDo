@@ -1,4 +1,4 @@
-.modalAdd {
+.modal-add {
   display: flex;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -11,39 +11,47 @@
   opacity: 0;
   transition: 0.5s;
   pointer-events: none;
-  .addCard {
+
+  .add-card {
     width: 100%;
     max-width: 450px;
     background-color: white;
     padding: 3%;
     border-radius: 5px;
-    .bodyAddCard {
+
+    .body-add-card {
       width: 100%;
       display: flex;
       flex-direction: column;
       padding: 0 20px;
       box-sizing: border-box;
+
       div {
         padding: 10px 0;
+
         label,
         input {
           display: block;
           width: 100%;
           box-sizing: border-box;
         }
+
         label {
           margin-bottom: 5px;
           font-weight: bold;
+
           span {
             color: red;
           }
         }
+
         input {
           padding: 10px 15px;
           margin-top: 10px;
           resize: none;
         }
       }
+
       .bot-send-mail {
         box-sizing: border-box;
         width: 100%;
@@ -58,6 +66,7 @@
         cursor: pointer;
         border: none;
         border-radius: 5px;
+
         &:hover {
           background-color: rgba(33, 41, 136, 0.774);
         }
@@ -65,6 +74,7 @@
     }
   }
 }
+
 .active {
   opacity: 1;
   pointer-events: all;

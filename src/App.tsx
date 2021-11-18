@@ -3,8 +3,8 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Todo from "./components/todoList/todo.page"
 
-const Autoriz = lazy(() => import('./components/autorizationPage/autorizationPage'));
-const SignUp = lazy(() => import('./components/registration/registrationPage'));
+const Autoriz = lazy(() => import('./components/autorizationPage/autorization.page'));
+const SignUp = lazy(() => import('./components/registration/registration.page'));
 
 function App() {
   return (

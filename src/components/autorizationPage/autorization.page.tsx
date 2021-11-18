@@ -11,18 +11,23 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from "react-router-dom";
-import Login from "./autorization.api"
+import {login} from "./autorization.api"
+import {useHistory} from "react-router-dom"
 
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
+export default function SignIn(){
+  
+  const history = useHistory() 
+
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
+
     const file = new FormData(event.currentTarget);
     const data = {
-      email: file.get('email'),
-      password: file.get('password'),
+      email: file.get('email') as string,
+      password: file.get('password') as string,
     };
-    Login(data)
+    await login(data)     
   };
 
   return (

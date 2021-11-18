@@ -1,5 +1,5 @@
 import * as React from 'react';
-import "./registrationPage.scss"
+import "./registration.page.scss"
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,20 +11,25 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import UserRegister from "./registration.api";
+import {userRegister} from "./registration.api";
+import {useHistory} from "react-router-dom"
 
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  
+  const history = useHistory()
+
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     const file = new FormData(event.currentTarget);
     const data = {
-      name: file.get('firstName') + file.get('lastName'),
-      email: file.get('email'),
-      password: file.get('password'),
-      age: file.get('age')
+      name: file.get('firstName') as string,
+      email: file.get('email') as string,
+      password: file.get('password')as string,
+      age: Number(file.get('age')),
     }
-    UserRegister(data)
+  const res = await userRegister(data)
+  
   };
 
 
